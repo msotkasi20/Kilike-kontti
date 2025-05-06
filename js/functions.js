@@ -23,6 +23,9 @@ const lauseet = [
     "Voi elläimen käsi!",
     "Heleppua o ku heinän juonti!",
     "Ookkonää Oulusta, pelekääkkönää polliisia?",
+    "Siitä lähti, sano Annikki Tähti!",
+    "Älä hättäile, istu mättääle!",
+    "Oli nii hilijasta että teki mieli kilijasta!"
 ]
 
 button1.addEventListener('click', () => {
