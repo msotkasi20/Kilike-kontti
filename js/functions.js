@@ -70,7 +70,7 @@ button3.addEventListener('click', () => {
     }
 
     const valinta = Math.random() < 0.5 ? vaihtoehto1 : vaihtoehto2
-    arvontavastaus.textContent = `Oikia vastaus: ${valinta}. Ei siitä nyt vaa sitte!`
+    arvontavastaus.textContent = `Oikia vastaus: ${valinta}!`
 })
 
 //Pallautemittari: palautetaan painallukset localStoragesta haulla tai alustetaan arvot nolliksi
