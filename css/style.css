@@ -7,6 +7,7 @@
 
 header {
     position: relative;
+    width: 100%;
     height: 200px;
     background-image: url('../images/oulu2.png');
     background-size: cover;
@@ -40,8 +41,9 @@ header {
     margin-bottom: 0.75rem;
 }
 
-.header-tekstit p {
+.header-tekstit h3 {
     font-weight: bold;
+    margin-top: 0.5rem;
 }
 
 nav a {
@@ -59,6 +61,7 @@ nav {
     padding: 1rem 0.5rem;
     color: black;
     text-align: center;
+    background-color: #fff8f2;
 }
 
 nav ul {
@@ -71,7 +74,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0;
+    margin: 0; 
 }
 
 hr {
@@ -79,6 +82,11 @@ hr {
     height: 3px;
     background-color: #3b2e26;
     margin: 0.5rem 0;
+}
+
+body {
+    background-color: #f2e6dc;
+    width: 100%;
 }
 
 p {
@@ -94,10 +102,20 @@ button {
     transition: background-color 0.2s ease-in-out;
 }
 
+#onnennumero-tulos, 
+#sanonnat-vastaus, 
+#arvonta-vastaus,  
+#tekosyy-vastaus {
+    font-weight: bold;
+    color: #4b3621;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+}
+
 div#onnennumero {
     text-align: left;
-    padding: 1rem 0.5rem;
-    
+    padding: 1rem 0.5rem;   
 }
 
 .kahavi-mittari {
@@ -106,7 +124,7 @@ div#onnennumero {
     background-color: #f3e5d8;
     border: 2px solid #ccc;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 8px 0;
     overflow: hidden;
     box-shadow: inset 0 1px 3px rgba(0,0,0,0.2)
 }
@@ -118,18 +136,13 @@ div#onnennumero {
     transition: width 0.5s ease;
 }
 
-#kahavi-arvo {
+#kahavi-arvo, #kahavi-kommentti {
+    text-align: center;
+    margin: 0.25rem 0;
+    padding: 0;
     font-weight: bold;
-    text-align: center;
-    margin: 0.5rem 0;
-    color: #6f4e37
-}
-
-#kahavi-kommentti {
-    font-style: italic;
-    text-align: center;
-    margin-top: 0.5rem;
-    color: #4b3621
+    color: #4b3621;
+    min-height: 2.5rem;
 }
 
 #sanonnat img {
@@ -175,6 +188,17 @@ footer::before {
     background-color: #3b2e26;
 }
 
+footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    font-weight: bold;
+    color: #4b3621;
+}
+
 .otsikko {
     text-align: center;
     margin-bottom: 1rem;
@@ -185,6 +209,7 @@ footer::before {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    padding: 0 1rem;
 }
 
 .sisaltolohko-keskitetty {
@@ -223,11 +248,84 @@ footer::before {
     text-align: left;
 }
 
+/*tekosyyt-sivun määritykset, ei omaa css-tiedostoa kun pieni projekti*/
+#tekosyy-buttoni {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+body#tekosyyt {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body#tekosyyt p {
+    line-height: 1.3;
+    margin: 1rem 0;
+}
+
+body#tekosyyt footer {
+    margin-top: auto;
+}
+
+/*Info-sivun määritykset*/
+body#infosivu {
+    background-color: #f2e6dc;
+    line-height: 1.8;
+}
+
+.logo-otsikko {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.oamk-logo {
+    width: 160px;
+    height: auto;
+}
+ 
+#infosivu article {
+    padding: 2rem;
+    background-color: #fff8f2;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    max-width: 900px;
+    margin: 2rem auto;
+}
+
+body#infosivu article h1, 
+body#infosivu article h3 {
+    text-align: left;
+}
+
+body#infosivu p {
+    margin-bottom: 1.2rem;
+}
+
+body#infosivu ul {
+    margin-left: 1.5rem;
+    padding-left: 1rem;
+}
+
+body#infosivu .sisaltolohko-vasen {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+    background: #fff8f2;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    max-width: 900px;
+    text-align: justify;
+}
+
 @media (min-width: 768px) {
+
     .sisalto {
         display: flex;
         align-items: flex-start;
-        gap: 1.5rem;
     }
 
     .sisaltolohko-vasen .sisalto {
@@ -239,22 +337,38 @@ footer::before {
     }
 
     .sisalto img {
+        flex-shrink: 0;
         width: 200px;
-        height: auto;
-        align-self: flex-start;
+        height: 200px;
+        object-fit: contain;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .teksti {
+        flex-grow: 1;
+        max-width: none;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        text-align: left
     }
 
     .sisaltolohko-vasen .sisalto img{
         margin-left: 1rem;
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 
     .sisaltolohko-oikea .sisalto img {
         margin-right: 1rem;
-        margin-left: 1.5rem;
+        margin-left: 1rem;
     }
-    .teksti {
-        flex: 1;
+
+    .sisaltolohko-oikea .teksti {
+        padding-left: 1.5rem;
+    }
+
+    .sisaltolohko-vasen .teksti {
+        padding-right: 1.5rem;
     }
 }  
 
