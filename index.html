@@ -8,8 +8,11 @@
 </head>
 <body>
     <header>
-        <h1>Kilike-kontti</h1>
-        <p>Täälä on kaikki mitä oululaine opiskelija tarttee</p>
+        <div class="header-overlay"></div>
+        <div class="header-tekstit">
+            <h1>Kilike-kontti</h1>
+            <p>!! Täälä on kaikki mitä oululaine opiskelija tarttee !!</p>
+        </div>
     </header>
     <hr>
     <nav>
@@ -32,52 +35,67 @@
         </ul>
     </nav>
     <hr>
-    <div id="onnennumero">
-        <h1>Onnennumero</h1>
-        <p>
-            Eikö onni potki? No, tästäpä saat itelles heleposti näppäämällä onnennumeron. Paina nappulaa ja voit voittaa!
-        </p>
-        <img src="./images/numerot.png" alt="numerot">
-        <button type="button" id="onnennumero-buttoni">Painappa tästä!</button>
-        <p id="onnennumero-tulos"></p>
-    </div>
-    <hr>
-    <div id="sanonnat">
-        <h1>Kököt sanansutkautukset</h1>
-        <p>
-            Eikö löyvvy vaa mittää sanottavvaa? Et oo ainua! Törkkää nappulaa ja saat taas jottai keskusteluntynkää elämään!
-        
-            <img src="./images/kysymys.png" alt="kysymys">
-            <button type="button" id="sanonnat-buttoni">Painappa tästä!</button>
-            <p id="sanonnat-vastaus"></p>
-        </p>
-    </div>
-    <hr>
-    <div id="kahavi">
-        <h1>Kahavintarpeen mittari</h1>
-        <p>Kahaviaaaa!!!! Täsäpä mittari joka kertoo oikian kahavintarpeen tähä hetkeen.</p>
-        <img src="./images/kahvi.png" alt="kahavi">
-        <button type="button" id="kahavi-buttoni">Tarkista kahavintarve!</button>
-        <div class="kahavi-mittari">
-            <div id="kahavi-palkki"></div>
+    <div id="onnennumero" class="sisaltolohko-vasen">
+        <h1 class="otsikko">Onnennumero</h1>
+        <div class="sisalto">
+            <img src="./images/numerot.png" alt="numerot">
+            <div class="teksti">
+                <p>Eikö onni potki? No, tästäpä saat itelles heleposti näppäämällä onnennumeron!</p>
+                <button type="button" id="onnennumero-buttoni">Painappa tästä!</button>
+                <p id="onnennumero-tulos"></p>
+            </div>
         </div>
-        <p id="kahavi-kommentti"></p>
-   </div>
-   <hr>
-    <div id="kaveri">
-        <h1>Päätöksentekokaveri</h1>
-        <p>
-            Eikö lähe? Kirijotappa ekkaan kenttään ekka vaihtoehto ja toisee toine, niin katotaa mitä tehä!
-        </p>
-            <img src="./images/tekosyymies.png" alt="kaveri">
-            <button type="button" id="kaveri-buttoni">Painappa tästä!</button>
     </div>
-    <hr>
-    <div id="pallautemittari">
-        <h1>Pallautemittari</h1>
-        <p>
-            Täsä pääset tyyttään hymynaamaria ja kertoon tykkäsikkö vai et!
-        </p>
+    
+    <div id="sanonnat" class="sisaltolohko-oikea">
+        <h1 class="otsikko">Kököt sanansutkautukset</h1>
+        <div class="sisalto">
+            <img src="./images/kysymys.png" alt="kysymys">
+            <div class="teksti">
+                <p>Eikö löyvvy vaa mittää sanottavvaa? Törkkää nappulaa ja pääset loistaan älykkyyvvellä!</p>
+                <button type="button" id="sanonnat-buttoni">Painappa tästä!</button>
+                <p id="sanonnat-vastaus"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="kahavi" class="sisaltolohko-vasen">
+        <h1 class="otsikko">Kahavintarpeen mittari</h1>
+        <div class="sisalto">
+            <img src="./images/kahvi.png" alt="kahavi">
+            <div class="teksti">
+                <p>Kahaviaaaa!!!! Täsäpä mittari joka kertoo oikian kahavintarpeen tähä hetkee.</p>
+                <button type="button" id="kahavi-buttoni">Tarkista kahavintarve!</button>
+                <!--Mittaripalkki-->
+                <div class="kahavi-mittari">
+                    <div id="kahavi-palkki"></div>
+                </div>
+                <p id="kahavi-arvo"></p>
+                <p id="kahavi-kommentti"></p>
+            </div>
+        </div>
+   </div>
+   
+    <div id="kaveri" class="sisaltolohko-oikea">
+        <h1 class="otsikko">Päätöksentekokaveri</h1>
+        <div class="sisalto">
+            <img src="./images/tekosyymies.png" alt="kaveri">
+            <div class="teksti">
+                <p>Eikö lähe? Kirijotappa ekaan kenttään eka vaihtoehto ja toisee toine, niin katotaa mitä tehä!</p>
+                <label>Eka vaihtis: </label>
+                <input id="eka" type="text">
+                <labet>Toka vaihtis: </labet>
+                <input id="toka" type="text">
+                <button type="button" id="kaveri-buttoni">Arvo tästä!</button>
+                <p id="arvonta-vastaus"></p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="pallautemittari" class="sisaltolohko-keskitetty">
+        <h1 class="otsikko">Pallautemittari</h1>
+        <div class="sisalto"></div>
+        <p>Täsä pääset tyyttään hymynaamaria ja kertoon tykkäsikkö vai et!</p>
         <div id="kuvakkeet">
             <button data-feedback="tosi-happy" title="Leveä hymy">
                 <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f600.png" alt="Leviä hymy">

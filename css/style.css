@@ -6,23 +6,47 @@
 }
 
 header {
-    width: 100%;
-    height: 120px;
-    background-size: cover;
     position: relative;
-    background-color: #4e0133;
-    color: #e9e4e7;
+    height: 200px;
+    background-image: url('../images/oulu2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,0.6);
+    z-index: 1;
+}
+
+.header-tekstit {
+    position: relative;
+    z-index: 2;
+    color: black;
     text-align: center;
 }
 
-header h1 {
-    padding: 1rem;
-    text-align: center;
+.header-tekstit h1 {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
 }
 
-a {
+.header-tekstit p {
+    font-weight: bold;
+}
+
+nav a {
     text-decoration: none;
-    color: #4e0133;
+    color: black;
     padding: 1rem 0.5rem;
 }
 
@@ -33,15 +57,32 @@ a:hover {
 
 nav {
     padding: 1rem 0.5rem;
+    color: black;
+    text-align: center;
 }
 
-li {
-    display: inline-block;
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.5rem;
+    list-style: none;
+    padding: 0;
 }
 
-img {
-    width: auto;
-    height: 10rem;
+nav li {
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: #4e0133;
+    margin: 0.5rem 0;
+}
+
+p {
+    line-height: 1.6;
 }
 
 div#onnennumero {
@@ -52,19 +93,34 @@ div#onnennumero {
 
 .kahavi-mittari {
     width: 100%;
-    height: 30px;
-    background-color: #eee;
+    height: 20px;
+    background-color: #f3e5d8;
     border: 2px solid #ccc;
-    border-radius: 5px;
-    margin-top: 1rem;
+    border-radius: 10px;
+    margin: 10px 0;
     overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2)
 }
 
 #kahavi-palkki {
     height: 100%;
     width: 0%;
-    background-color: #af1f85;
-    transition: widht 0.5s ease;
+    background-color: #6f4e37;
+    transition: width 0.5s ease;
+}
+
+#kahavi-arvo {
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0;
+    color: #6f4e37
+}
+
+#kahavi-kommentti {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #4b3621
 }
 
 #kuvakkeet button {
@@ -86,8 +142,105 @@ div#onnennumero {
 }
 
 footer {
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4e9dd;
+    height: 60px;
+    margin-top: auto; 
+    position: relative;
 }
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4e0133;
+}
+
+.otsikko {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sisalto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sisaltolohko-keskitetty {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+    background: #fff8f2;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+    max-width: 900px;
+    text-align: center;
+}
+
+.sisaltolohko-vasen,
+.sisaltolohko-oikea {
+  padding: 2rem 1rem;
+  margin: 2rem auto;
+  background: #fff8f2;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+  max-width: 900px;
+}
+
+.sisalto img {
+    width: 200px;
+    height: auto;
+    align-self: flex-start;
+    margin-right: 1.5rem;
+}
+
+.teksti {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 500px;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .sisalto {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .sisaltolohko-vasen .sisalto {
+        flex-direction: row;
+    }
+
+    .sisaltolohko-oikea .sisalto {
+        flex-direction: row-reverse;
+    }
+
+    .sisalto img {
+        width: 200px;
+        height: auto;
+    }
+
+    .sisaltolohko-vasen .sisalto img{
+        margin-right: 1.5rem;
+    }
+
+    .sisaltolohko-oikea .sisalto img {
+        margin-left: 1.5rem;
+    }
+    .teksti {
+        flex: 1;
+    }
+}  
+
+
 
 
