@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    background-size: cover;
+    position: relative;
+    background-color: #4e0133;
+    color: #e9e4e7;
+    text-align: center;
+}
+
+header h1 {
+    padding: 1rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #4e0133;
+    padding: 1rem 0.5rem;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #666;
+}
+
+nav {
+    padding: 1rem 0.5rem;
+}
+
+li {
+    display: inline-block;
+}
+
+img {
+    width: auto;
+    height: 10rem;
+}
+
+div#onnennumero {
+    text-align: left;
+    padding: 1rem 0.5rem;
+    
+}
+
+.kahavi-mittari {
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+#kahavi-palkki {
+    height: 100%;
+    width: 0%;
+    background-color: #af1f85;
+    transition: widht 0.5s ease;
+}
+
+#kuvakkeet button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    padding: 0;
+    transition: transform 0.1s ease-in-out;
+}
+
+#kuvakkeet button:hover {
+    transform: scale(1.1);
+}
+
+#kuvakkeet img {
+    width: 64px;
+    height: 64px;
+}
+
+footer {
+    text-align: center;
+    
+}
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Kilike-kontti</title>
+</head>
+<body>
+    <header>
+        <h1>Kilike-kontti</h1>
+        <p>Täälä on kaikki mitä oululaine opiskelija tarttee</p>
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li>
+                <a href="#onnennumero">Onnennumero</a>
+            </li>
+            <li>
+                <a href="#sanonnat">Kököt sanansutkautukset</a>
+            </li>
+            <li>
+                <a href="#kahavi">Kahavintarpeen mittari</a>
+            </li>
+            <li>
+                <a href="#kaveri">Päätöksentekokaveri</a>
+            </li>
+            <li>
+                <a href="#pallautemittari">Pallautemittari</a>
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    <div id="onnennumero">
+        <h1>Onnennumero</h1>
+        <p>
+            Eikö onni potki? No, tästäpä saat itelles heleposti näppäämällä onnennumeron. Paina nappulaa ja voit voittaa!
+        </p>
+        <img src="./images/numerot.png" alt="numerot">
+        <button type="button" id="onnennumero-buttoni">Painappa tästä!</button>
+        <p id="onnennumero-tulos"></p>
+    </div>
+    <hr>
+    <div id="sanonnat">
+        <h1>Kököt sanansutkautukset</h1>
+        <p>
+            Eikö löyvvy vaa mittää sanottavvaa? Et oo ainua! Törkkää nappulaa ja saat taas jottai keskusteluntynkää elämään!
+        
+            <img src="./images/kysymys.png" alt="kysymys">
+            <button type="button" id="sanonnat-buttoni">Painappa tästä!</button>
+            <p id="sanonnat-vastaus"></p>
+        </p>
+    </div>
+    <hr>
+    <div id="kahavi">
+        <h1>Kahavintarpeen mittari</h1>
+        <p>Kahaviaaaa!!!! Täsäpä mittari joka kertoo oikian kahavintarpeen tähä hetkeen.</p>
+        <img src="./images/kahvi.png" alt="kahavi">
+        <button type="button" id="kahavi-buttoni">Tarkista kahavintarve!</button>
+        <div class="kahavi-mittari">
+            <div id="kahavi-palkki"></div>
+        </div>
+        <p id="kahavi-kommentti"></p>
+   </div>
+   <hr>
+    <div id="kaveri">
+        <h1>Päätöksentekokaveri</h1>
+        <p>
+            Eikö lähe? Kirijotappa ekkaan kenttään ekka vaihtoehto ja toisee toine, niin katotaa mitä tehä!
+        </p>
+            <img src="./images/tekosyymies.png" alt="kaveri">
+            <button type="button" id="kaveri-buttoni">Painappa tästä!</button>
+    </div>
+    <hr>
+    <div id="pallautemittari">
+        <h1>Pallautemittari</h1>
+        <p>
+            Täsä pääset tyyttään hymynaamaria ja kertoon tykkäsikkö vai et!
+        </p>
+        <div id="kuvakkeet">
+            <button data-feedback="tosi-happy" title="Leveä hymy">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f600.png" alt="Leviä hymy">
+                <div class="counter">0</div>
+            </button>
+            <button data-feedback="happy" title="Normi hymy">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f642.png" alt="Normi hymy">
+                <div class="counter">0</div>
+            </button>
+            <button data-feedback="neutraali" title="Neutraali naama">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f610.png" alt="Neutraali naama">
+                <div class="counter">0</div>
+            </button>
+            <button data-feedback="surullinen" title="Surunaama">
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f641.png" alt="Surunaama">
+                <div class="counter">0</div>
+            </button>
+        </div>
+    </div>
+</body>
+<footer>
+    <p>Meikä teki tän! T. Merja</p>
+</footer>
+<script src="./js/functions.js"></script>
+</html>
