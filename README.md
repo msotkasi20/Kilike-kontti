@@ -27,8 +27,6 @@ Tavoitteena oli toteuttaa JavaScriptillä toimiva, HTML- ja CSS-pohjainen verkko
 
 ## 🗂 Tiedostorakenne
 
-## 🗂 Tiedostorakenne
-
 ```
 Kilike-kontti/
 ├── index.html
