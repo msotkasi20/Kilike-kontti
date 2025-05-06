@@ -27,23 +27,25 @@ Tavoitteena oli toteuttaa JavaScriptillä toimiva, HTML- ja CSS-pohjainen verkko
 
 ## 🗂 Tiedostorakenne
 
+## 🗂 Tiedostorakenne
+
+```
 Kilike-kontti/
 ├── index.html
 ├── tekosyyt.html
 ├── info.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── js/
-│ └── functions.js
+│   └── functions.js
 ├── images/
-│ └── kuvat
-├── screenshots/
-│ ├── etusivu1.png
-│ ├── etusivu2.png
-│ ├── tekosyygeneraattori.png
-│ └── infosivu.png
+│   ├── etusivu1.png
+│   ├── etusivu2.png
+│   ├── tekosyygeneraattori.png
+│   ├── infosivu.png
+│   └── muut kuvatiedostot
 └── README.md
-
+```
 
 ## Näyttökuvat
 
